@@ -15,24 +15,7 @@
     <h2> This is my first page </h2>
     <br>
     
-    <p>Click the button to get your coordinates </p>
-    <button onclick="getLocation()">Try it</button>
-    <p id="demo"></p>
-    <script>
-    var x =document.getElementbyId("demo");
-    
-    function getLocation() {
-      if (naavigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-    function showPosition(position) {
-      x.innerHTML = "Latitude": " + position.coords.latitude + 
-      "<br>Longtitude: " + positon.coords.longitude;
-    }
-    </script>
+   
     <p>
     
 
@@ -53,6 +36,24 @@
       
     </ol>
     
+    <p>Click the button to get your coordinates </p>
+    <button onclick="getLocation()">Try it</button>
+    <p id="demo"></p>
+    <script>
+    var x =document.getElementbyId("demo");
+    
+    function getLocation() {
+      if (naavigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude": " + position.coords.latitude + 
+      "<br>Longtitude: " + positon.coords.longitude;
+    }
+    </script>
     
     
   </body>
