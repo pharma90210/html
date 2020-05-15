@@ -10,6 +10,26 @@
   </head>
   
   <body>
+    
+    <p>Click the button to get your coordinates </p>
+    <buttol onclick="getLocation()">Try it</button>
+    <p id="demo"></p>
+    <script>
+    var x =document.getElementbyId("demo");
+    
+    function getLocation() {
+      if (naavigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude": " + position.coords.latitude + 
+      "<br>Longtitude: " + positon.coords.longitude;
+    }
+    </script>
+    
     <h1> Hello there!  </h1>
     <h2> This is my first page </h2>
     <br>
